@@ -12,7 +12,7 @@ export const InputPassword = (props) => {
   return (
     <span className={style.container}>
       <span onClick={handleClickEye} className={style.spanEye}>
-        {eyeOpen ? <i class="bi bi-eye-fill"></i> : <i class="bi bi-eye-slash-fill"></i>}
+        {eyeOpen ? <i className="bi bi-eye-fill"></i> : <i className="bi bi-eye-slash-fill"></i>}
       </span>
       <Input {...props} type={eyeOpen ? "text" : "password"} />
     </span>
