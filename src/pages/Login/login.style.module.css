@@ -1,0 +1,34 @@
+body {
+  background-color: #1a3042;
+}
+
+.containerLogin {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.form{
+  text-align: center;
+}
+
+.containerTittle, .containerLogo{
+  display: flex;
+  justify-content: center;
+}
+
+.containerTittle{
+  margin-top: 5%;
+}
+
+.imgTittle, .imgLogo{
+  height: 100%;
+  width: 100%;
+}
+
+.hiperlink{
+  color: var(--off-white);
+}

@@ -1,0 +1,28 @@
+body {
+  background-color: var(--light-blue);
+}
+.header{
+ display: flex;
+ justify-content: space-around;
+}
+
+.containerLogin {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuItem{
+  margin: 1000px 0;
+  background: red;
+}
+
+.tittleMenu{
+ color: var(--black);
+ margin-top: 10%;
+ font-size: 1.5em;
+}
+
