@@ -1,66 +1,63 @@
-/* Position and sizing of burger button */
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
+@import "./../../global.style.module.css";
+
+.ulMenu {
+  display: block;
+  gap: .5rem;
+  position: absolute;
+  width: 60%;
+  left: 0;
+  background: var(--light-yellow);
+  transition: .6s;
+  height: 0px;
+  z-index: 1;
+  visibility: hidden;
+  overflow-y: hidden;
+  border: 0px 1px 1px 1px solid var(--off-white);
+
 }
 
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
+.btnMobile {
+  display: flex;
+  padding: .5rem;
+  background: none;
+  cursor: pointer;
+  gap: .5rem;
 }
 
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  background: #a90000;
+.spamHamburguer {
+  border-top: 2px solid var(--black);
+  width: 25px;
+  margin-top: 5px;
 }
 
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
+.spamHamburguer::after,
+.spamHamburguer::before {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: var(--black);
+  margin-top: 5px;
+  transition: .3s;
+  position: relative;
 }
 
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #bdc3c7;
+.active.active .spamHamburguer {
+  border-top-color: transparent;
 }
 
-/*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
-.bm-menu-wrap {
-  position: fixed;
-  height: 100%;
+.active.active .spamHamburguer::before {
+  transform: rotate(135deg);
+
 }
 
-/* General sidebar styles */
-.bm-menu {
-  background: #373a47;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+.active.active .spamHamburguer::after {
+  transform: rotate(-135deg);
+  top: -7px;
 }
 
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
-}
-
-/* Individual item */
-.bm-item {
-  display: inline-block;
-}
-
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+.active.active .ulMenu {
+  visibility: visible;
+  height: 35%;
+  overflow-y: auto;
 }
