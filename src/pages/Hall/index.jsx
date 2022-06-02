@@ -1,7 +1,8 @@
 // import { useState, useEffect } from "react";
-import { slide as Menu } from "react-burger-menu";
+// import { getProduct, createOrder } from "../services/api";
+import { MenuHamburger } from "../../components/MenuHamburger";
 // import { useNavigate } from "react-router-dom";
-// import { List } from "../../components/List";
+// import { Cards } from "../../components/Cards";
 // import { Button } from "../../components/Button";
 import style from "./hall.style.module.css";
 // import { codeError } from "./../../service/error";
@@ -9,70 +10,37 @@ import style from "./hall.style.module.css";
 
 export function Hall(){
   // const navigate = useNavigate();
-  // const [error, setError] = useState("");
+  // const [products, setProducts] = useState([]);
+  // const [order, setOrder] = useState([]);
+  // // const [error, setError] = useState("");
+
+  // function allProducts
   
+ 
   
+
+
+
+
+
   return (
   <>
     <header className={style.header} >
-      <Menu styles={ styles } >
-        <ul>   
-          <li><a className={style.menuItem} >Menu Manhã</a></li>
-          <li><a className={style.menuItem} >Menu All Day</a></li>
-          <li><a className={style.menuItem} >Pedidos prontos</a></li>
-          <li><a className={style.menuItem} >Sair</a></li>
-        </ul>
-        </Menu>
+      <MenuHamburger>           
+        <li><p className={style.menuItem} >Menu Manhã</p></li>
+        <li><p className={style.menuItem} >Menu All Day</p></li>
+        <li><p className={style.menuItem} >Pedidos prontos</p></li>
+        <li><p className={style.menuItem} >Sair</p></li>        
+      </MenuHamburger>
         <h1 className={style.tittleMenu} >Menu Manhã</h1> 
     </header>
     <main className={style.containerMenu}>      
-      
+      <section className={style.optionsMenu}>
+        <p id="all">TUDO</p>
+        <p id="coffee">CAFÉS</p>
+        <p id="sandwich">SANDUICHES</p>
+      </section>
     </main>  
   </> 
   )
-}
-
-var styles = {
-  bmBurgerButton: {
-    position: 'fixed',
-    width: '36px',
-    height: '30px',
-    left: '36px',
-    top: '36px'
-  },
-  bmBurgerBars: {
-    background: 'var(--black)'
-  },
-  bmBurgerBarsHover: {
-    background: 'var(--black)'
-  },
-  bmCrossButton: {
-    height: '24px',
-    width: '24px'
-  },
-  bmCross: {
-    background: 'var(--off-white)'
-  },
-  bmMenuWrap: {
-    position: 'fixed',
-    height: '100%'
-  },
-  bmMenu: {
-    background: 'var(--navy)',
-    padding: '2.5em 1.5em 0',
-    fontSize: '1.5em',
-  },
-  bmMorphShape: {
-    fill: 'var(--off-white)'
-  },
-  bmItemList: {
-    color: 'var(--off-white)',
-    padding: '1em',
-  },
-  bmItem: {
-    display: 'inline-block'
-  },
-  bmOverlay: {
-    background: 'var(--off-white)'
-  }
 }
