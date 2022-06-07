@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { Cards } from "../../components/Cards";
 import style from "./hall.style.module.css";
 import { codeError } from "./../../service/error";
+import { Button } from "../../components/Button";
+import { Modal } from "../../components/Modal";
 
 
 export function Hall(){
@@ -41,12 +43,14 @@ export function Hall(){
     return setRequester(() => {
       const clientRequester = {...requester};
       clientRequester[e.target.name] = e.target.value;
+      console.log(clientRequester)
       return clientRequester;
     }
     )
   }
 
   function addNewProduct(product){
+    console.log(product)
     const newOrder = order;
     const addProductMenu = newOrder.find((item) => {
       return item.id === product.id;
@@ -85,12 +89,12 @@ export function Hall(){
     setOrder([...order]);
   }
 
-  function sendRequest(){
-    function listOrder(){
-      const placeOrder = {
-        client: requester.client,
-        table: requester.table,
-        products: order.map((item) => {
+    function sendRequest(){
+      function listOrder(){
+        const placeOrder = {
+          client: requester.client,
+          table: requester.table,
+          products: order.map((item) => {
           const infosOrder = {
             id: item.id,
             name: item.name,
@@ -98,19 +102,22 @@ export function Hall(){
             flavor: item.flavor,
             complement: item.complement,
             qtd: 1,
-          };
-          return infosOrder;
-        }),
+        };
+        console.log(infosOrder)
+        return infosOrder;
+      }),
       }
+      console.log(placeOrder)
       return placeOrder;
+        
       }
-
+        
       const resumeOrder = listOrder();
       console.log(resumeOrder);
 
       createOrder(resumeOrder)
       .then(() => {
-        navigate("/kitchen");
+        navigate("/kitchen"); //modal
       })
       .catch((error) => {
         setError(codeError(error));
@@ -143,15 +150,17 @@ export function Hall(){
       <h1 className={style.tittleMenu}>Menu</h1> 
       <section className={style.sectionInfoClient}>
         <InputInfoClient 
-        type="text"
-        className={style.inputClient}
-        placeholder="CLIENTE"      
-        value={requester.client}  
-        onChange={handleRequester}           
-        required/>
+          type="text"
+          className={style.inputClient}
+          placeholder="CLIENTE"   
+          name= "client"   
+          value={requester.client}  
+          onChange={handleRequester}           
+          required/>
         <InputInfoClient
-        type="text"
+          type="text"
           placeholder="MESA"
+          name= "table"
           value={requester.table}
           onChange={handleRequester}
           required/>        
@@ -173,6 +182,7 @@ export function Hall(){
           );
         })}
       </section>
+      <Button onClick={sendRequest} type="submit">CONFIRMAR PEDIDO</Button>
 
 
     </main>  

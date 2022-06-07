@@ -3,7 +3,7 @@ import { Button } from "./../Button"
 import mais from "./../../imgs/mais.png"
 
 export function Cards({product, onClick}) {
-  console.log(product)
+  //console.log(product)
   return (  
       <ul className={styles.ulCard} onClick={onClick}> 
         <li className={styles.liCard}>
