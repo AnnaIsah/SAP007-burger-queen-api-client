@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   height: 30vh;
-  width: 30vw;
+  width: 50vw;
   justify-content: center;
   background-color: var(--grey);
   border-radius: 10px;
