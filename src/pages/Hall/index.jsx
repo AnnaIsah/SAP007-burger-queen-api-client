@@ -46,13 +46,13 @@ export function Hall(){
     )
   }
 
-  function handleProduct(product){
+  function addNewProduct(product){
     const newOrder = order;
-    const productMenu = newOrder.find((item) => {
+    const addProductMenu = newOrder.find((item) => {
       return item.id === product.id;
     });
-    if (productMenu) {
-      productMenu.qtd += 1;
+    if (addProductMenu) {
+      addProductMenu.qtd += 1;
     }else{
       const newList = {
         id: product.id,
@@ -65,6 +65,24 @@ export function Hall(){
       newOrder.push(newList);
     }
     setOrder([...newOrder])
+  }
+
+  function removeProduct(item) {
+    const productInList = order.find((element) => element.id === item.id);
+
+    if (productInList) {
+      if (productInList.qtd === 1) {
+        order.splice(
+          order.findIndex((element) => element.id === item.id),
+          1
+        );
+        productInList.qtd = 0;
+      }
+      if (productInList.qtd > 1) {
+        productInList.qtd -= 1;
+      }
+    }
+    setOrder([...order]);
   }
 
   function sendRequest(){
@@ -97,24 +115,6 @@ export function Hall(){
       .catch((error) => {
         setError(codeError(error));
       });
-    }
-
-    function handleRemoveItem(item) {
-      const productInList = order.find((element) => element.id === item.id);
-  
-      if (productInList) {
-        if (productInList.qtd === 1) {
-          order.splice(
-            order.findIndex((element) => element.id === item.id),
-            1
-          );
-          productInList.qtd = 0;
-        }
-        if (productInList.qtd > 1) {
-          productInList.qtd -= 1;
-        }
-      }
-      setOrder([...order]);
     }
   
     function totalValue() {
@@ -168,7 +168,7 @@ export function Hall(){
             <Cards
               key={item.id}
               product={item}
-              onClick={() => handleProduct(item)}
+              onClick={() => addNewProduct(item)}
             />
           );
         })}

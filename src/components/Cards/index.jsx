@@ -4,11 +4,10 @@ import mais from "./../../imgs/mais.png"
 
 export function Cards({product, onClick}) {
   console.log(product)
-  return (
-    <section className={styles.sectionCard}onClick={onClick}>
-      <ul className={styles.ulCard}>
-        <li>
-        <img className={styles.imgMenu} src={product.image}/>
+  return (  
+      <ul className={styles.ulCard} onClick={onClick}> 
+        <li className={styles.liCard}>
+          <img className={styles.imgMenu} src={product.image}/>
           <p className={styles.id}>{product.id}</p>         
           <p>{product.name}</p>
           <p>R${(product.price).toFixed(2)}</p>        
@@ -16,7 +15,7 @@ export function Cards({product, onClick}) {
           <p>{product.qtd}</p>
           <Button onClick={onClick}><img className={styles.imgAdd} src={mais}/></Button>
         </li>
-      </ul>     
-    </section>
+      </ul>
+    
   );
 }

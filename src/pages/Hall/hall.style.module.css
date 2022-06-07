@@ -29,9 +29,8 @@ body {
   justify-content:flex-end;
   align-items: center;
 }
-.sectionCard{
+/* .sectionCard{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 100%;
-}
+} */
