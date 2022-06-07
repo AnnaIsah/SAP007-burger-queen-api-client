@@ -5,18 +5,8 @@ body {
 }
 .header{
  display: flex; 
+ align-items: center;
  border-bottom: solid 2px;
- margin: 3% 0;
- /* justify-content: space-around; */
-}
-
-.containerLogin {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
 }
 
 .menuItem{
@@ -26,12 +16,22 @@ body {
 }
 .tittleMenu{
  color: var(--black);
- font-size: 1.5em;
-  margin-top: 2%;
+ font-size: 2em;
 }
 .optionsMenu{
   display: flex;
   justify-content: space-between;
   margin-top: 7%;
   border-bottom: solid 2px;
+}
+.sectionInfoClient{
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+.sectionCard{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
 }
