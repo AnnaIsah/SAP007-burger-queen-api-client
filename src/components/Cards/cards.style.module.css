@@ -1,18 +1,24 @@
-.DivCard{
-  width: 160px;
+.sectionCard{
   display: flex;
-  justify-content: center;
 }
-
-.UlCard{
-  width: 100%;
-  background-color: var(--grey) ;
-  border-radius: 10%;
-  display: flex;
+.ulCard{
+  height: 30vh;
+  width: 30vw;
+  justify-content: center;
+  background-color: var(--grey);
+  border-radius: 10px;
+}
+.imgMenu{
+  width: 50px;
+  height: 50px;
 }
 .id{
   visibility: hidden;
 }
+
 li{
   list-style-type: none;
+}
+.imgAdd{
+  height: 30px;  
 }

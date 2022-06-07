@@ -1,0 +1,10 @@
+.inputInfoClient {
+  display: block;
+  border: solid 1px transparent;
+  border-radius: 5px;
+  margin-right: 2%;
+  width: 35%;
+  height: 4vh;
+  font-size: 1em;
+  text-align: center;
+}

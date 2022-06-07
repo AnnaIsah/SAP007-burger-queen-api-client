@@ -35,7 +35,6 @@ export function Login() {
       })
       .then((data) => {
         setToken(data.token);
-        setToken(data.token);
           navigate(data.role === "hall" ? "/hall" : "/kitchen");       
       })
       .catch((error) => console.log(error));
