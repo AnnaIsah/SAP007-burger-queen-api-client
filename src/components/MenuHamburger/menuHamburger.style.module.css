@@ -6,7 +6,7 @@
   position: absolute;
   width: 60%;
   left: 0;
-  background: var(--light-yellow);
+  background: var(--navy);
   transition: .6s;
   height: 0px;
   z-index: 1;

@@ -10,6 +10,7 @@
 }
 .menuItem{
   font-size: 1.5em;
+  color: var(--off-white);
   margin-top: 10px;
   padding: 10px;
 }
@@ -37,11 +38,6 @@
   margin-top: 5%;
   overflow: auto;
 }
-
-.containerCards{
-  background-color: var(--grey);
-  border-radius: 10px;
-}
 .containerProducts{
   display: flex;
   flex-wrap: wrap;
@@ -50,4 +46,21 @@
   margin: 0 auto;
   justify-content: space-between;
   gap:10px;
+}
+.containerCards{
+  background-color: var(--grey);
+  border-radius: 10px;
+}
+.sectionOrderConfirm{
+  background-color: var(--grey);
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+.tittleResume{
+  font-size: 40px;
+  font-weight: bold;
+}
+.containerTemplate{
+  border-bottom: solid 2px var(--black);
 }

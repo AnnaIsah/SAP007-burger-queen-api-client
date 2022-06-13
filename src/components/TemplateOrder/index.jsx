@@ -1,22 +1,22 @@
 import styles from "./template.style.module.css";
-import lixeira from "./../../imgs/lixeira.png";
 
-export function TemplateOrder({product, onClickRemove}) {
+export function TemplateOrder({product, children, onClickRemove}) {
   console.log(product)
-  return (  
-      <ul className={styles.ulTemplate}> 
-        <li>          
+  return (   
+        <li className={styles.liTemplate}> 
+        <div className={styles.div}>         
           {product.id ? <p></p>:null}
-          <h1 className={styles.nameProduct}>{product.name}</h1>
-          {product.flavor ? <li><p className={styles.product}>{product.flavor}</p></li>:null}
-          <p className={styles.product}>Complemento:{product.complement}</p>
-          <p className={styles.product}>Quantidade:{product.qtd}</p>
-          <p className={styles.product}>R${(product.price).toFixed(2)}</p> 
-          <button className={styles.btnRemove}onClick={onClickRemove}>
-            <img className={styles.imgRemove} src={lixeira}/>
-          </button>
-        </li>
-      </ul>
-    
+          <p className={styles.productName}>{product.name}</p>
+          <p>R${(product.price).toFixed(2)}</p> 
+          <p>x{product.qtd}</p>
+          {children}
+          </div>
+          <div className={styles.complement}>
+            {product.flavor ? <li><p>{product.flavor}</p></li>:null}
+          </div>
+          <div className={styles.complement}>
+            {product.complement ? <li><p>Complemento: {product.complement}</p></li>:null }
+          </div>
+        </li>       
   );
 }

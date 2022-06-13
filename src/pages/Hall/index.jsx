@@ -8,7 +8,7 @@ import style from "./hall.style.module.css";
 import { codeError } from "./../../service/error";
 import { Button } from "../../components/Button";
 import { ButtonCounter } from "../../components/ButtonCounter"
-import { TemplateOrder } from "../../components/TemplateOrder";
+import { TemplateOrder } from "../../components/TemplateOrder"
 
 export function Hall(){
   const navigate = useNavigate(); 
@@ -195,19 +195,29 @@ export function Hall(){
             );
           })}
         </ul>
-      </section>    
-      <section className={style.sectionTemplate}>        
-      {order.map((item) => {
-          return (
-            <TemplateOrder
-              key={item.id}
-              product={item}
-              onClickRemove={() => removeProduct(item)}
-            />
-           );          
-        })}        
-        <p> VALOR TOTAL: R${totalValue().toFixed(2)}</p>
-      </section>      
+      </section>        
+      <section className={style.sectionOrderConfirm}>   
+        <h1 className={style.tittleResume} >Resumo</h1>
+          <ul>     
+          {order.map((item) => {
+              return (
+                <section className={style.containerTemplate}>
+                  <TemplateOrder
+                    key={item.id}
+                    product={item}
+                  /> 
+                  <ButtonCounter
+                  amount={getItemCount(item)}
+                  increase={() => addNewProduct(item)}
+                  decrease={() => removeProduct(item)}
+                />                              
+                </section>
+              );          
+            })} 
+          </ul>                   
+      </section> 
+             
+      <p> VALOR TOTAL: R${totalValue().toFixed(2)}</p>
       <Button onClick={sendRequest} type="submit">CONFIRMAR PEDIDO</Button>
     </main>  
   </section> 

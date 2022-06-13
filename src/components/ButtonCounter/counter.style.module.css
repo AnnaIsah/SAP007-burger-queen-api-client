@@ -3,7 +3,6 @@
   justify-content: space-around;
   align-items: center;
   gap: 10px;
-  background-color: var(--grey);
   border-radius: 0 0 10px 10px;
 }
 .imgIncrease, .imgDecrease{
