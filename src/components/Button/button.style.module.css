@@ -2,12 +2,15 @@
 
 .button {
   display: block;
+  justify-content: center;
+  align-items: center;
   background:  var(--off-white);
-  border: solid 1px transparent;
+  border: solid 2px var(--black);
   border-radius: 10px;
   width: 100%;
   height: 7vh;
-  margin: 5vh 0;
+  font-size: large;
+  font-weight: bold;
 }
 
 .button:hover {

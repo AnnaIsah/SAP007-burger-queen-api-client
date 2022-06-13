@@ -1,0 +1,10 @@
+.countContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+.imgIncrease, .imgDecrease{
+  height: 30px;
+  width: 30px;
+}

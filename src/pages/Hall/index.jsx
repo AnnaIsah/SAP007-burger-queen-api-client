@@ -7,6 +7,7 @@ import { Cards } from "../../components/Cards";
 import style from "./hall.style.module.css";
 import { codeError } from "./../../service/error";
 import { Button } from "../../components/Button";
+import { ButtonCounter } from "../../components/ButtonCounter"
 import { TemplateOrder } from "../../components/TemplateOrder";
 
 export function Hall(){
@@ -21,7 +22,7 @@ export function Hall(){
     navigate("/");
   }
 
-  function Products(options){
+  function Products(options){ 
     getProduct()
     .then((response) => response.json())
     .then((data) => {
@@ -87,6 +88,11 @@ export function Hall(){
     }
     setOrder([...order]);
   }
+
+  const getItemCount = (product) => {
+    const findProduct = order.find((element) => element.id === product.id);
+    return findProduct ? findProduct.qtd : 0;
+  };
 
     function sendRequest(){
       function listOrder(){
@@ -165,21 +171,30 @@ export function Hall(){
           required/>        
       </section>
     </header>
-    <main className={style.containerMenu}>      
+    <main>      
       <section className={style.optionsMenu}>
         <button className={style.textButton} id="all" onClick={() => Products("breakfast")}>MENU MANHÃ</button>
         <button className={style.textButton} id="all" onClick={() => Products("all-day")}>MENU TODO DIA</button>     
       </section>
-      <section className="sectionCard">
-        {product.map((item) => {
-          return (
-            <Cards
-              key={item.id}
-              product={item}
-              onClick={() => addNewProduct(item)}
+      <section className={style.sectionCards}>
+        <ul className={style.containerProducts}>
+          {product.map((item) => {
+            return (
+              <section>
+              <Cards
+                key={item.id}
+                product={item}
+                onClick={() => addNewProduct(item)}
+              />
+              <ButtonCounter
+              amount={getItemCount(item)}
+              increase={() => addNewProduct(item)}
+              decrease={() => removeProduct(item)}
             />
-          );
-        })}
+            </section>
+            );
+          })}
+        </ul>
       </section>    
       <section className={style.sectionTemplate}>        
       {order.map((item) => {
