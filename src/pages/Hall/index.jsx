@@ -180,7 +180,7 @@ export function Hall(){
         <ul className={style.containerProducts}>
           {product.map((item) => {
             return (
-              <section>
+              <section className={style.containerCards}>
               <Cards
                 key={item.id}
                 product={item}
