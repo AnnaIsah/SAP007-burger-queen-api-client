@@ -1,5 +1,6 @@
 .input {
   display: block;
+  background: var(--off-white);
   border: solid 1px transparent;
   border-radius: 10px;
   width: 100%;

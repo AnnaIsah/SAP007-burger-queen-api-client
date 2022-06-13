@@ -9,7 +9,6 @@ import { createUser } from "./../../service/api";
 import { setToken } from "../../service/token";
 import { codeError } from "../../service/error";
 import style from "./register.style.module.css"
-import LogoQueen30 from "./../../imgs/LogoQueen30.png";
 import burguerQueen from "./../../imgs/burguerQueen.png";
 
 export function Register() {
@@ -74,13 +73,6 @@ export function Register() {
             src={burguerQueen}
             className={style.imgTittle}
             alt="titulo burger queen"
-          />
-        </figure>
-        <figure className={style.containerLogo}>
-          <img
-            src={LogoQueen30}
-            className={style.imgLogo}
-            alt="logo burger queen"
           />
         </figure>
         <form className={style.form}>

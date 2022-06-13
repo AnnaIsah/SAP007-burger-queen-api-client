@@ -1,6 +1,6 @@
 @import "./../../global.style.module.css";
 
-body {
+.sectionHall{
   background-color: var(--light-blue);
 }
 .header{
@@ -24,13 +24,16 @@ body {
   margin-top: 7%;
   border-bottom: solid 2px;
 }
+.textButton{
+  font-size: 1.25em;
+}
 .sectionInfoClient{
   display: flex;
   justify-content:flex-end;
   align-items: center;
 }
-/* .sectionCard{
+.sectionCard{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-} */
+}

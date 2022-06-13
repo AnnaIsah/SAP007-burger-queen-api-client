@@ -7,8 +7,7 @@ import { Cards } from "../../components/Cards";
 import style from "./hall.style.module.css";
 import { codeError } from "./../../service/error";
 import { Button } from "../../components/Button";
-import { Modal } from "../../components/Modal";
-
+import { TemplateOrder } from "../../components/TemplateOrder";
 
 export function Hall(){
   const navigate = useNavigate(); 
@@ -71,13 +70,13 @@ export function Hall(){
     setOrder([...newOrder])
   }
 
-  function removeProduct(item) {
-    const productInList = order.find((element) => element.id === item.id);
+  function removeProduct(product) {
+    const productInList = order.find((element) => element.id === product.id);
 
     if (productInList) {
       if (productInList.qtd === 1) {
         order.splice(
-          order.findIndex((element) => element.id === item.id),
+          order.findIndex((element) => element.id === product.id),
           1
         );
         productInList.qtd = 0;
@@ -117,7 +116,7 @@ export function Hall(){
 
       createOrder(resumeOrder)
       .then(() => {
-        navigate("/kitchen"); //modal
+        navigate("/kitchen");
       })
       .catch((error) => {
         setError(codeError(error));
@@ -140,7 +139,7 @@ export function Hall(){
     
    
   return (
-  <>
+  <section className={style.sectionHall}>
     <header className={style.header} >
       <MenuHamburger>           
         <li><button className={style.menuItem} onClick={() => Products("breakfast")} >Menu's</button></li>        
@@ -168,8 +167,8 @@ export function Hall(){
     </header>
     <main className={style.containerMenu}>      
       <section className={style.optionsMenu}>
-        <button id="all" onClick={() => Products("breakfast")}>MENU MANHÃ</button>
-        <button id="all" onClick={() => Products("all-day")}>MENU TODO DIA</button>     
+        <button className={style.textButton} id="all" onClick={() => Products("breakfast")}>MENU MANHÃ</button>
+        <button className={style.textButton} id="all" onClick={() => Products("all-day")}>MENU TODO DIA</button>     
       </section>
       <section className="sectionCard">
         {product.map((item) => {
@@ -181,11 +180,21 @@ export function Hall(){
             />
           );
         })}
-      </section>
+      </section>    
+      <section className={style.sectionTemplate}>        
+      {order.map((item) => {
+          return (
+            <TemplateOrder
+              key={item.id}
+              product={item}
+              onClickRemove={() => removeProduct(item)}
+            />
+           );          
+        })}        
+        <p> VALOR TOTAL: R${totalValue().toFixed(2)}</p>
+      </section>      
       <Button onClick={sendRequest} type="submit">CONFIRMAR PEDIDO</Button>
-
-
     </main>  
-  </> 
+  </section> 
   )
-      }
+}

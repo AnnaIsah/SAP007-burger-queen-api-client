@@ -1,5 +1,8 @@
+@import "./../../global.style.module.css";
+
 .button {
   display: block;
+  background:  var(--off-white);
   border: solid 1px transparent;
   border-radius: 10px;
   width: 100%;

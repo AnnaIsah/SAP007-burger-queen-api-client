@@ -41,20 +41,13 @@ export function Login() {
     };
 
   return (
-    <>
+    <section className={style.sectionLogin}>
       <main className={style.containerLogin}>
         <figure className={style.containerTittle}>
           <img
             src={burguerQueen}
             className={style.imgTittle}
             alt="titulo burger queen"
-          />
-        </figure>
-        <figure className={style.containerLogo}>
-          <img
-            src={LogoQueen30}
-            className={style.imgLogo}
-            alt="logo burger queen"
           />
         </figure>
         <form className={style.form} onSubmit={handleOnClickLogin}>
@@ -82,6 +75,6 @@ export function Login() {
           {error && <Message type="error" msg={error} />}
         </form>
       </main>
-    </>
+    </section>
   );
 }

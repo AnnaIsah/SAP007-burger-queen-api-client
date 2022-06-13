@@ -1,5 +1,9 @@
 body {
-  background-color: #1a3042;
+  background-color: var(--navy);
+  background-image: url("./../../imgs/LogoQueen30.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100vh;
 }
 
 .containerRegister {
@@ -24,7 +28,7 @@ body {
   margin-top: 5%;
 }
 
-.imgTittle, .imgLogo{
+.imgTittle{
   height: 100%;
   width: 100%;
 }
