@@ -68,7 +68,7 @@ export function Register() {
   return (
     <>
       <main className={style.containerRegister}>
-      <figure className={style.containerTittle}>
+      <figure className={style.containerFigureTittle}>
           <img
             src={burguerQueen}
             className={style.imgTittle}

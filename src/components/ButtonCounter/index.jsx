@@ -1,16 +1,16 @@
 import styles from "./counter.style.module.css";
-import mais from "./../../imgs/mais.png";
-import menos from "./../../imgs/menos.png";
+import adicao from "./../../imgs/adicao.png";
+import subtracao from "./../../imgs/subtracao.png";
 
 export function ButtonCounter({decrease, increase, amount = 0,...props}){
   return (
     <div className={styles.countContainer}>
       <button className={styles.btnDecrease} onClick={decrease} {...props}>
-      <img className={styles.imgDecrease} src={menos}/>
+      <img className={styles.imgDecrease} src={subtracao}/>
       </button>
       <p className="count-amount">{amount}</p>
       <button className={styles.btnIncrease} onClick={increase} {...props}>
-        <img className={styles.imgIncrease} src={mais}/>
+        <img className={styles.imgIncrease} src={adicao}/>
       </button>
     </div>
   );

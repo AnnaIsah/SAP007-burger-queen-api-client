@@ -43,7 +43,7 @@ export function Login() {
   return (
     <section className={style.sectionLogin}>
       <main className={style.containerLogin}>
-        <figure className={style.containerTittle}>
+        <figure className={style.containerFigureTittle}>
           <img
             src={burguerQueen}
             className={style.imgTittle}

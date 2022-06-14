@@ -5,7 +5,6 @@ body {
   background-position: 50% 50%;
   height: 100vh;
 }
-
 .containerLogin {
   display: flex;
   flex-wrap: wrap;
@@ -14,25 +13,32 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+.containerFigureTittle{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+.imgTittle{
+  height: 90%;
+  width: 90%;
+}
 .form{
   text-align: center;
 }
-
-.containerTittle, .containerLogo{
-  display: flex;
-  justify-content: center;
-}
-
-.containerTittle{
-  margin-top: 5%;
-}
-
-.imgTittle{
-  height: 100%;
-  width: 100%;
-}
-
 .hiperlink{
   color: var(--off-white);
+}
+
+@media screen and (min-width: 576px){
+  .imgTittle{
+    height: 80%;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .imgTittle{
+    height: 70%;
+    width: 70%;
+  }
 }

@@ -1,6 +1,6 @@
 import styles from "./template.style.module.css";
 
-export function TemplateOrder({product, children, onClickRemove}) {
+export function TemplateOrder({product, children}) {
   console.log(product)
   return (   
         <li className={styles.liTemplate}> 

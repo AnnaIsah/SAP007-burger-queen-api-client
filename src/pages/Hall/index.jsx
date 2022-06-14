@@ -197,7 +197,7 @@ export function Hall(){
         </ul>
       </section>        
       <section className={style.sectionOrderConfirm}>   
-        <h1 className={style.tittleResume} >Resumo</h1>
+        <p className={style.tittleResume}>Resumo do pedido</p>
           <ul>     
           {order.map((item) => {
               return (
@@ -214,11 +214,10 @@ export function Hall(){
                 </section>
               );          
             })} 
+            <p className={style.totalValue}> Valor total: R${totalValue().toFixed(2)}</p>
           </ul>                   
-      </section> 
-             
-      <p> VALOR TOTAL: R${totalValue().toFixed(2)}</p>
-      <Button onClick={sendRequest} type="submit">CONFIRMAR PEDIDO</Button>
+      </section>     
+      <Button onClick={sendRequest} type="submit">CONFIRMAR PEDIDO</Button>  
     </main>  
   </section> 
   )

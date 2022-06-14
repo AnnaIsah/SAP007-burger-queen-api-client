@@ -6,7 +6,8 @@
 .header{
  display: flex; 
  align-items: center;
- border-bottom: solid 2px;
+ justify-content: space-between;
+ border-bottom: solid 2px var(--black);
 }
 .menuItem{
   font-size: 1.5em;
@@ -25,7 +26,9 @@
   border-bottom: solid 2px;
 }
 .textButton{
+  margin: 0 2%;
   font-size: 1.25em;
+  font-weight: bold;
 }
 .sectionInfoClient{
   display: flex;
@@ -52,15 +55,35 @@
   border-radius: 10px;
 }
 .sectionOrderConfirm{
-  background-color: var(--grey);
-  width: 100%;
+  background-color: var(--off-white);
+  border: solid 2px var(--black);
+  border-radius: 20px;
+  width: 90%;
   justify-content: center;
   text-align: center;
+  margin: 5%;
+
 }
 .tittleResume{
-  font-size: 40px;
+  margin: 0 auto;
+}
+.tittleResume, .totalValue{
+  font-size: 2em;
   font-weight: bold;
+}
+.totalValue{
+  font-size: 1.5em;
+}
+.tittleResume{
+  border-bottom: solid 2px var(--black);
 }
 .containerTemplate{
   border-bottom: solid 2px var(--black);
 }
+
+/* @media screen and (min-width: 576px){
+  
+ 
+} */
+
+

@@ -5,7 +5,6 @@ body {
   background-position: 50% 50%;
   height: 100vh;
 }
-
 .containerRegister {
   display: flex;
   flex-wrap: wrap;
@@ -14,25 +13,33 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.form{
-  text-align: center;
-}
-
-.containerTittle, .containerLogo{
+.containerFigureTittle{
   display: flex;
   justify-content: center;
-}
-
-.containerTittle{
   margin-top: 5%;
 }
-
 .imgTittle{
   height: 100%;
   width: 100%;
 }
-
+.form{
+  text-align: center;
+}
 .hiperlink{
   color: var(--off-white);
 }
+
+@media screen and (min-width: 576px){
+  .imgTittle{
+    height: 80%;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .imgTittle{
+    height: 70%;
+    width: 70%;
+  }
+}
+
