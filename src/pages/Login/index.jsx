@@ -5,7 +5,6 @@ import { InputPassword } from "../../components/InputPassword";
 import { Button } from "../../components/Button";
 import { Message } from "../../components/Message";
 import style from "./login.style.module.css";
-import LogoQueen30 from "./../../imgs/LogoQueen30.png";
 import burguerQueen from "./../../imgs/burguerQueen.png";
 import { login } from "../../service/api";
 import { codeError } from "../../service/error";
@@ -50,7 +49,7 @@ export function Login() {
             alt="titulo burger queen"
           />
         </figure>
-        <form className={style.form} onSubmit={handleOnClickLogin}>
+        <form className={style.form}>
           <Input
             type="email"
             value={email}
@@ -65,7 +64,7 @@ export function Login() {
             onChange={(e) => setPassword(e.target.value)}           
             required           
           />
-          <Button type="submit">
+          <Button onClick={handleOnClickLogin} type="submit">
             ENTRAR
           </Button>
           <Link to="/register" className={style.hiperlink}>
