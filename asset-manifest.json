@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/SAP007-burger-queen-api-client/static/css/main.52ee17fe.css",
+    "main.js": "/SAP007-burger-queen-api-client/static/js/main.1b18dd61.js",
+    "static/media/LogoQueen30.png": "/SAP007-burger-queen-api-client/static/media/LogoQueen30.64eda4bbfe5184492bf0.png",
+    "static/media/burguerQueen.png": "/SAP007-burger-queen-api-client/static/media/burguerQueen.329bf4e02f3835f9443b.png",
+    "static/media/subtracao.png": "/SAP007-burger-queen-api-client/static/media/subtracao.abf01f4c6004aa075348.png",
+    "static/media/adicao.png": "/SAP007-burger-queen-api-client/static/media/adicao.177e14406af079b6ccc6.png",
+    "index.html": "/SAP007-burger-queen-api-client/index.html",
+    "main.52ee17fe.css.map": "/SAP007-burger-queen-api-client/static/css/main.52ee17fe.css.map",
+    "main.1b18dd61.js.map": "/SAP007-burger-queen-api-client/static/js/main.1b18dd61.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52ee17fe.css",
+    "static/js/main.1b18dd61.js"
+  ]
+}
