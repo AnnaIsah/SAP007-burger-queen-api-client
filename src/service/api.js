@@ -1,4 +1,4 @@
-import {getToken} from "./token"; 
+import {getToken} from "./token";
 
 const URL = "https://lab-api-bq.herokuapp.com";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { PrivateRoute } from "./service/PrivateRoute";
+import { PrivateRoute } from "./service/PrivateRoute"
 
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";

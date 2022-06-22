@@ -1,70 +1,138 @@
-# Getting Started with Create React App
+# Burger Queen (API Client)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Burger Queen Hamburgueria 🍔
 
-## Available Scripts
+## Índice
 
-In the project directory, you can run:
+* [1. Resumo do projeto](#1-resumo-do-projeto)
+* [2. Definição do produto](#2-definição-do-produto)
+* [3. UX/ UI Designer](#3-UX/-UI-Designer)
+* [4. Tecnologias utilizadas](#5-critérios-mínimos-de-aceitação-do-projeto)
+* [5. Considerações Finais](#6-hacker-edition)
+***
 
-### `npm start`
+## 1. Resumo do projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Um pequeno restaurante de hambúrgueres, que está crescendo, necessita uma
+interface em que se possa realizar pedidos utilizando um _tablet_, e enviá-los
+para a cozinha para que sejam preparados de forma ordenada e eficiente.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Este projeto tem duas áreas: interface (cliente) e API (servidor). Nosso
+cliente nos pediu para desenvolver uma interface que se integre com a API.
 
-### `npm test`
+Desta vez temos um projeto 100% por demanda. Você sempre pode (e deve) fazer
+sugestões de melhora e mudança, mas muitas vezes trabalhará em um projeto em que
+primeiro deve se assegurar de cumprir os requisitos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Estas são as informações que temos do cliente:
 
-### `npm run build`
+> Somos **Burger Queen**, um fast food 24hrs.
+>
+>A nossa proposta de serviço 24 horas foi muito bem recebida e, para continuar a
+>crescer, precisamos de um sistema que nos ajude a receber pedidos de nossos
+>clientes.
+>
+>Nós temos 2 menus. Um muito simples para o café da manhã:
+>
+>| Ítem                      |Preço R$|
+>|---------------------------|------|
+>| Café americano            |    5 |
+>| Café com leite            |    7 |
+>| Sanduíche de presunto e queijo|   10 |
+>| Suco de fruta natural     |    7 |
+>
+>E outro menu para o resto do dia:
+>
+>| Ítem                      |Preço |
+>|---------------------------|------|
+>|**Hambúrgueres**           |   **R$**   |
+>|Hambúrguer simples         |    10|
+>|Hambúrguer duplo           |    15|
+>|**Acompanhamentos**        |   **R$**   |
+>|Batata frita               |     5|
+>|Anéis de cebola            |     5|
+>|**Bebidas**                |   **R$**   |
+>|Água 500ml                 |     5|
+>|Água 750ml                 |     7|
+>|Bebida gaseificada 500ml   |     7|
+>|Bebida gaseificada 750ml   |    10|
+>
+> **Importante:** Os clientes podem escolher entre hambúrgueres de carne bovina,
+> frango ou vegetariano. Além disso, por um adicional de R\$ 1,00 , eles podem
+> adicionar queijo **ou** ovo.
+>
+>Nossos clientes são bastante indecisos, por isso é muito comum que eles mudem o
+>seu pedido várias vezes antes de finalizar.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A interface deve mostrar os dois menus (café da manhã e restante do dia), cada
+um com todos os seus _produtos_. O usuário deve poder escolher que _produtos_
+adicionar e a interface deve mostrar o _resumo do pedido_ com o custo total.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 2. Definição do Produto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Um sistema de comanda de pedidos para acesso de garçon/garçonete e chef de cozinha para uma hamburgueria de atentimento 24hs.
+A temática foi inspirada no nome do projeto *"Burger Queen"*, a aplicação é uma SPA (Single Page Aplication) e tem um designer responsivo.
 
-### `npm run eject`
+## 3. UX/ UI Designer
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+O projeto foi criado a partir do conceito *"first mobile"*, mas originalmente seu uso foi pensado para *tablet's*, porém o produto foi trabalhado para atender diversos tamanhos de tela conforme a necessidade do usuário.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+O designer do projeto foi criado a partir do próprio nome, o objetivo é transmitir uma imagem rústica como a temática da lanchonete, porém com um visual agradável ao usuário.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Paleta de cores
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+As cores usadas foram definidas a partir da logo da hamburgueria, o uso de tons mais neutros e sóbrios foi pensando no conforto do usuário.
 
-## Learn More
+![Logo](./src/imgs/LogoQueen100.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Paleta](./src/imgs/PaletaProjeto.PNG)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Protótipos
 
-### Code Splitting
+#### Tablet:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Prototipo](./src/imgs/PrototipoTablet.PNG)
 
-### Analyzing the Bundle Size
+#### Mobile:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img src="./src/imgs/telaRegistro.PNG" alt="tela de registro"  style="border-radius:10px">
 
-### Making a Progressive Web App
+<img src="./src/imgs/telaLogin.PNG" alt="tela de login"  style="border-radius:10px">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<img src="./src/imgs/telaMenu.PNG" alt="tela do menu"  style="border-radius:10px">
 
-### Advanced Configuration
+<img src="./src/imgs/telaCarrinho.PNG" alt="tela do carrinho"  style="border-radius:10px">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 4. Tecnologias utilizadas
 
-### `npm run build` fails to minify
+- HTML 
+- CSS (module)
+- JSX
+- Node JS
+- Git
+- GitHub
+- Jest
+- React
+- API
+- Figma
+- Canvas
+- Slack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 5. Considerações finais
+
+Esse projeto está sendo desenvolvido pela dev Anna Ferraz, quarto projeto do bootcamp da Laboratória, turma SAP007.
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="www.linkedin.com/in/anna-ferraz">    
+  <sub>
+      <h1>LinkedIn: Anna Ferraz</h1>
+  </sub>
+      </a>
+    </td>
+</table>
+
+
